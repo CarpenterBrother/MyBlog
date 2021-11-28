@@ -1,0 +1,239 @@
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+html, body{
+   margin: 0; 
+   padding: 0;
+   color: #fff;
+   font-family: 'Oswald', sans-serif;
+   scroll-behavior: smooth;
+}
+
+audio {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: .6;
+    z-index: 100;
+    border-radius: 50px;
+    background-color: #711c91;
+}
+nav {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    display: flex;
+    padding: 3rem 10rem;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav a .arrow{
+    border: 2px white;
+    border-style: none solid solid none;
+    height: 20px;
+    width: 20px;
+    transform: rotate(45deg);
+
+}
+
+
+.container {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.container img{
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.container img.bg1{
+    height: 100vh;
+}
+
+.container img.sun{
+    transition: .2s ease all;
+    object-position: top;
+    size: 200px;
+    height: 100vh;
+}
+
+.container img.car{
+    object-position: bottom;
+    /* height: 60vh;
+    bottom: 0; */
+    height: 100vh;
+}
+
+.intro {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+    font-size: 2.5rem;
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(#091833, #133e7c);
+    min-height: 50vh;
+    z-index: 2;
+
+}
+.intro p{
+    padding-top: 2rem;
+}
+
+
+
+.contact {
+    width: 100%;
+    height: 120vh;
+    background-color: #133e7c;
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.post1 {
+    background-color: #091833;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    top: 200px;
+    flex-direction: row;
+    text-align: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 40px;
+    border-radius: 20px;
+}
+.col-left {
+    transform: rotate(-10deg) scale(1.1);
+    height: 300px;
+    width: 400px;
+    z-index: 1;
+}
+.col-left .about-img {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border: 10px solid white;
+}
+
+.col-left .about-img::after {
+    content: '';
+    position: absolute;
+    left: -33px;
+    top: 19px;
+    height: 98%;
+    width: 98%;
+    border: 7px solid #711c91;
+    z-index: -1;
+}
+
+.col-left .about-img .doit {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+.col-left .about-img .doit::after {
+    height: 100%;
+    width: 100%;
+    content: '';
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .4;
+    
+}
+
+.col-left .about-img .doit img {
+    height: 100%;
+    width: auto;
+    position: absolute;
+    left: 0;
+    
+}
+
+
+.col-right {
+    flex-shrink: 2;
+    width: 100%;
+    padding: 0 10rem;
+}
+.col-right h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    margin-bottom: 10px;
+}
+.col-right p {
+    margin-bottom: 20px;
+}
+.col-right .cta {
+    color: black;
+    margin-bottom: 50px;
+}
+
+
+.footer{
+    background-color: #091833;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.2rem;
+    color: white;
+    height: 250px;
+}
+.social-icon {
+    display: flex;
+    margin-bottom: 30px;
+}
+.social-item {
+    height: 40px;
+    width: 40px;
+    margin: 0 6px;
+}
+.social-item img {
+    height: 100%;
+    width: 100%;
+    filter: drop-shadow(2px 2px 2px red) invert(85%);
+    transition: .5s ease filter;
+}
+.social-item:hover img {
+    filter: none;
+}
+
+@media only screen and (max-width:768px) {
+    .contact{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .post1{
+        flex-direction: column;
+        margin: 0 10px;
+    }
+    .col-left{
+        transform: scale(.8);
+    }
+    .col-right{
+        padding: 0;
+    }
+    .intro p {
+        font-size: 2rem;
+    }
+}
